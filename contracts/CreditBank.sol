@@ -35,7 +35,7 @@ contract CreditBank {
     error InsufficientCredit(uint256 credit, uint256 redeemCredit);
 
     function redeemCredit(uint256 _redeemCredit) public {
-        require(msg.sender == owner, "You are not the owner of this account");;
+        require(msg.sender == owner, "You are not the owner of this account");
         if (credit < _redeemCredit) {
             revert InsufficientCredit({
                 credit: credit,
